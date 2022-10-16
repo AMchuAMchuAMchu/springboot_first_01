@@ -1,4 +1,4 @@
-package com.itheima.springboot_first_01;
+package com.itheima;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
