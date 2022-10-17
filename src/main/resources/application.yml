@@ -1,7 +1,8 @@
 server:
   port: 8081
-spring:
-  main:
-    banner-mode: off
+#spring:
+#  main:
+#    banner-mode: off
 logging:
-  level: debug
+  level:
+    root: debug
