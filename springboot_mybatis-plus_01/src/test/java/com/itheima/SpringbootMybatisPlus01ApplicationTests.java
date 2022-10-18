@@ -1,5 +1,6 @@
 package com.itheima;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.dao.AnimeInfoDao;
 import com.itheima.pojo.AnimeInfo;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,21 @@ class SpringbootMybatisPlus01ApplicationTests {
 
     @Autowired
     private AnimeInfoDao animeInfoDao;
+
+    @Test
+    void textPage(){
+
+        Page<AnimeInfo> animeInfoPage = new Page<>(1, 4);
+
+        Page<AnimeInfo> animeInfoPage1 = animeInfoDao.selectPage(animeInfoPage, null);
+
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        System.out.println(animeInfoPage1);
+
+    }
 
     @Test
     void contextLoads() {
