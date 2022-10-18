@@ -21,13 +21,14 @@ class SpringbootMybatisPlus01ApplicationTests {
 
         Page<AnimeInfo> animeInfoPage = new Page<>(1, 4);
 
+        Page<AnimeInfo> animeInfoPage1 = animeInfoDao.selectPage(animeInfoPage, null);
 
 
         System.out.println();
         System.out.println();
         System.out.println();
 
-        System.out.println(animeInfoPage.getPages());
+        System.out.println(animeInfoPage1.getPages());
 
     }
 
