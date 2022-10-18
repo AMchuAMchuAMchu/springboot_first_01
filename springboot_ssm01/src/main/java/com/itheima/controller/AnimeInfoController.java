@@ -29,8 +29,8 @@ public class AnimeInfoController {
         return b?"true":"false";
     }
 
-    @DeleteMapping
-    public String deleteById(Integer id){
+    @DeleteMapping("/{id}")
+    public String deleteById(@PathVariable Integer id){
         boolean b = animeInfoService.deleteById(id);
         return b?"true":"false";
     }
