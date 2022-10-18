@@ -1,9 +1,11 @@
 package com.itheima.controller;
 
 import com.itheima.pojo.AnimeInfo;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.itheima.service.AnimeInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * Description ==> TODO
@@ -18,10 +20,43 @@ import org.springframework.web.bind.annotation.RestController;
 public class AnimeInfoController {
 
 
+    @Autowired
+    private AnimeInfoService animeInfoService;
+
+    @PostMapping
+    public String insertOne(@RequestBody AnimeInfo animeInfo){
+        boolean b = animeInfoService.insertOne(animeInfo);
+        return String.valueOf(b);
+    }
+
+    @DeleteMapping
+    public String deleteById(Integer id){
+        boolean b = animeInfoService.deleteById(id);
+        return String.valueOf(b);
+    }
+
+    @PutMapping
+    public String updateById(AnimeInfo animeInfo){
+        boolean b = animeInfoService.updateById(animeInfo);
+        return String.valueOf(b);
+    }
 
     @GetMapping("/{id}")
-    public AnimeInfo selectById(Integer id){
-
+    public AnimeInfo selectById(@PathVariable Integer id){
+        AnimeInfo animeInfo = animeInfoService.selectById(id);
+        return animeInfo;
     }
+
+    @GetMapping
+    public List<AnimeInfo> selectAll(){
+        List<AnimeInfo> animeInfos = animeInfoService.selectAll();
+        return animeInfos;
+    }
+
+
+
+
+
+
 
 }
