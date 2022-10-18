@@ -7,8 +7,6 @@ spring:
     username: root
     password: root
     type: com.alibaba.druid.pool.DruidDataSource
-  main:
-    allow-bean-definition-overriding: true
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
