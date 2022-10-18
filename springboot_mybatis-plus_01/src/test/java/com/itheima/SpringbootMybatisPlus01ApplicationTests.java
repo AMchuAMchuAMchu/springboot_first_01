@@ -28,7 +28,7 @@ class SpringbootMybatisPlus01ApplicationTests {
         System.out.println();
         System.out.println();
 
-        System.out.println(animeInfoPage1.getRecords());
+        animeInfoPage1.getRecords().forEach(System.out::println);
 
     }
 
