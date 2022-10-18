@@ -4,6 +4,7 @@ import com.itheima.dao.AnimeInfoDao;
 import com.itheima.pojo.AnimeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * Author ==> _02雪乃赤瞳楪祈校条祭_艾米丽可锦木千束木更七草荠_制作委员会_start
  */
 @Service
+@Transactional
 public class AnimeInfoService {
 
     @Autowired
