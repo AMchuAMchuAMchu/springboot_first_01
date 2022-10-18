@@ -26,19 +26,19 @@ public class AnimeInfoController {
     @PostMapping
     public String insertOne(@RequestBody AnimeInfo animeInfo){
         boolean b = animeInfoService.insertOne(animeInfo);
-        return String.valueOf(b);
+        return b?"true":"false";
     }
 
     @DeleteMapping
     public String deleteById(Integer id){
         boolean b = animeInfoService.deleteById(id);
-        return String.valueOf(b);
+        return b?"true":"false";
     }
 
     @PutMapping
     public String updateById(AnimeInfo animeInfo){
         boolean b = animeInfoService.updateById(animeInfo);
-        return String.valueOf(b);
+        return b?"true":"false";
     }
 
     @GetMapping("/{id}")
