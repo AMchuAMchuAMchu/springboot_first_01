@@ -24,7 +24,7 @@ public class AnimeInfoController {
     private AnimeInfoService animeInfoService;
 
     @PostMapping
-    public String insertOne(@RequestBody AnimeInfo animeInfo){
+    public String insertOne(AnimeInfo animeInfo){
         boolean b = animeInfoService.insertOne(animeInfo);
         return b?"true":"false";
     }
