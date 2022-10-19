@@ -1,6 +1,6 @@
 package com.itheima.dao;
 
-import com.itheima.pojo.AnimeInfo;
+import com.itheima.domain.AnimeInfo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

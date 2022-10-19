@@ -1,7 +1,7 @@
 package com.itheima.service;
 
 import com.itheima.dao.AnimeInfoDao;
-import com.itheima.pojo.AnimeInfo;
+import com.itheima.domain.AnimeInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

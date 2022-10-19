@@ -1,7 +1,7 @@
 package com.itheima;
 
 import com.itheima.dao.AnimeInfoDao;
-import com.itheima.pojo.AnimeInfo;
+import com.itheima.domain.AnimeInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

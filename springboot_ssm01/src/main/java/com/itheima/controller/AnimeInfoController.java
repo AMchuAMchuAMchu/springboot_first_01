@@ -1,6 +1,6 @@
 package com.itheima.controller;
 
-import com.itheima.pojo.AnimeInfo;
+import com.itheima.domain.AnimeInfo;
 import com.itheima.service.AnimeInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,19 +24,19 @@ public class AnimeInfoController {
     private AnimeInfoService animeInfoService;
 
     @PostMapping
-    public String insertOne(AnimeInfo animeInfo){
+    public String insertOne(@RequestBody AnimeInfo animeInfo){
         boolean b = animeInfoService.insertOne(animeInfo);
         return b?"true":"false";
     }
 
     @DeleteMapping("/{id}")
-    public String deleteById(@PathVariable Integer id){
+    public String dleteById(@PathVariable Integer id){
         boolean b = animeInfoService.deleteById(id);
         return b?"true":"false";
     }
 
     @PutMapping
-    public String updateById(AnimeInfo animeInfo){
+    public String updateById(@RequestBody AnimeInfo animeInfo){
         boolean b = animeInfoService.updateById(animeInfo);
         return b?"true":"false";
     }
